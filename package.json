@@ -1,0 +1,22 @@
+{
+  "name": "watch-gitignore-rsync",
+  "version": "1.0.0",
+  "description": "Watch file & rsync but respect .gitignore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Budianto Tan",
+  "license": "WTFPL",
+  "dependencies": {
+    "anymatch": "^2.0.0",
+    "chokidar": "^2.1.2",
+    "find": "^0.3.0",
+    "lodash": "^4.17.11",
+    "parse-gitignore": "^1.0.1",
+    "yargs": "^13.2.2"
+  },
+  "bin": {
+    "watch-rsync": "./index.js"
+  }
+}
