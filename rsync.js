@@ -8,6 +8,7 @@ module.exports.rsync = (verbose, source, destination, opts, excludeArgs) => {
   return new Promise((resolve, reject) => {
     exec(
       `rsync -e ssh ${opts} ${s} ${d} ${excludeArgs}`,
+      {maxBuffer: 1024 * 5000},
       (error, stdout, stderr) => {
         if (stderr || error) {
           reject(`Exec rsync error: ${stderr || error}`);
